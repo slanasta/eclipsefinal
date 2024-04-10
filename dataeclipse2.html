@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Professor Policies on Attending the Eclipse</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Professor Policies on Attending the Eclipse</h1>
+  <canvas id="professorPolicyChart"></canvas>
+
+  <script>
+    var ctx = document.getElementById('professorPolicyChart').getContext('2d');
+    var professorPolicyChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Could Leave Class', 'Had to Stay in Class'],
+        datasets: [{
+          label: '# of Students',
+          data: [54, 29],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)'
+          ],
+          borderWidth: 1
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
